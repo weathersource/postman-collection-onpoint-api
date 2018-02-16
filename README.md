@@ -34,7 +34,6 @@ The free 30-day Developer Key will give you access to the following requests:
 * Forecast Postal Code
 * Nowcast Postal Code
 * Astronomy Postal Code
-* Astronomy Postal Code
 * Postal Code Metadata
 
 If you need access to the other resources, higher throughput allowance, or license to use the API in a production environment, please email <sales@weathersource.com> or call (844) 813-2617.
