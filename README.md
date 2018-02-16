@@ -10,7 +10,7 @@ If you do not already have the Postman app installed, download and intall a copy
 
 Once Postman is installed, click the [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/ce7a3abf5ca6e28ff776) button.
 
-Postman will propmt a selection of Postman applications (Postman for Chrome or Postman for your native OS) with which to open the OnPoint API collection. Select the application you have installed.
+Postman will propmt a selection of Postman applications (Postman for Chrome or Postman for Mac/Windows/Linux) with which to open the OnPoint API collection. Select the application you have installed.
 
 ![Open with...](https://github.com/weathersource/postman-collection-onpoint-api/blob/master/assets/open-with.png?raw=true)
 
