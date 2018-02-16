@@ -1,0 +1,4373 @@
+{
+	"info": {
+		"name": "OnPoint API",
+		"_postman_id": "0f917fa1-b677-77c3-3d2b-fabbfff692d0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "History",
+			"description": "",
+			"item": [
+				{
+					"name": "History OnPoint ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}/history.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{onpoint_id}}",
+								"history.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"equals": true,
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"disabled": true
+								},
+								{
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"equals": true,
+									"key": "period",
+									"value": "hour",
+									"disabled": true
+								},
+								{
+									"description": "Comma separated list of field names (default is \"all\")",
+									"equals": true,
+									"key": "fields",
+									"value": "all",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of weather history data for an OnPoint™ ID. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-onpoint_id-history/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{onpoint_id}}` a valid OnPoint ID. (example: `10724391`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([History Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-history/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "90f7cb05-f628-4510-995c-3bb1a1503bf9",
+							"name": "History OnPoint ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}/history.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{onpoint_id}}",
+										"history.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"equals": true,
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"disabled": true
+										},
+										{
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"equals": true,
+											"key": "period",
+											"value": "hour",
+											"disabled": true
+										},
+										{
+											"description": "Comma separated list of field names (default is \"all\")",
+											"equals": true,
+											"key": "fields",
+											"value": "all",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "History Lat/Lon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}/history.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{latitude}},{{longitude}}",
+								"history.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"equals": true,
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"disabled": true
+								},
+								{
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"equals": true,
+									"key": "period",
+									"value": "hour",
+									"disabled": true
+								},
+								{
+									"description": "Comma separated list of field names (default is \"all\")",
+									"equals": true,
+									"key": "fields",
+									"value": "all",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of weather history data for a latitude/longitude point. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-latitude_and_longitude-history/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{latitude}}` a valid latitude value between -90 and 90. (example: `38.8428`)\n\n`{{longitude}}` a valid longitude value between -180 and 180. (example: `-77.0381`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([History Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-history/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "d2a46b4f-0320-4e7e-bb82-a808a5e857b1",
+							"name": "History Lat/Lon",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}/history.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{latitude}},{{longitude}}",
+										"history.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"equals": true,
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"disabled": true
+										},
+										{
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"equals": true,
+											"key": "period",
+											"value": "hour",
+											"disabled": true
+										},
+										{
+											"description": "Comma separated list of field names (default is \"all\")",
+											"equals": true,
+											"key": "fields",
+											"value": "all",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "History Postal Code",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dfd25a80-3e1e-49a0-a7d0-65c6f45408a3",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}/history.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"postal_codes",
+								"{{postal_code}},{{country}}",
+								"history.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of weather history data for a postal code. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-history/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{postal_code}}` a valid postal code. Any spaces in the postal code must be URL encoded as `%20`. (example: `22222` or `X0A%200K0`)\n\n`{{country}}` a valid [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1) country code. (example: `us` or `ca`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource **is** available to free 30-day developer plans. For access to this resource for longer than 30 days, or for licensed use of the API in production environments, please email <sales@weathersource.com> or call (844) 813-2617."
+					},
+					"response": [
+						{
+							"id": "29c3dfe1-ddec-416c-aacd-a5fbc39b194f",
+							"name": "History Postal Code",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}/history.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"postal_codes",
+										"{{postal_code}},{{country}}",
+										"history.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "History Designated Marketing Area",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}/history.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"dmas",
+								"{{dma_id}}",
+								"history.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of weather history data for a Nielsen Designated Marketing Area (“DMA”). Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-dmas-dma_id-history/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{dma_id}}` any valid [Designated Marketing Area ID](https://developer.weathersource.com/documentation/designated-marketing-areas/). (example: `529`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([History Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-history/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "e95c63fb-4854-498e-b53b-451173391c06",
+							"name": "History Designated Marketing Area",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}/history.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"dmas",
+										"{{dma_id}}",
+										"history.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "History Spatial File Metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/history/{{datatype}}.json?timestamp_eq=2018-02-01T00:00:00+00:00&filetype=geojson.gz",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"history",
+								"{{datatype}}.json"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"equals": true,
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"disabled": true
+								},
+								{
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"equals": true,
+									"key": "period",
+									"value": "hour",
+									"disabled": true
+								},
+								{
+									"key": "filetype",
+									"value": "geojson.gz",
+									"equals": true,
+									"description": "Allowed values: \"geojson.gz\", \"shp.zip\", \"geotiff\", and \"png\""
+								}
+							]
+						},
+						"description": "Returns metadata for a regional spatial file of weather history for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-history-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([History Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-history/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "95d7e5a4-5307-43eb-83bc-b1d6f3650cba",
+							"name": "History Spatial File Metadata",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/history/{{datatype}}.json?timestamp_eq=2018-02-01T00:00:00+00:00&filetype=geojson.gz",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"history",
+										"{{datatype}}.json"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"equals": true,
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"disabled": true
+										},
+										{
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"equals": true,
+											"key": "period",
+											"value": "hour",
+											"disabled": true
+										},
+										{
+											"key": "filetype",
+											"value": "geojson.gz",
+											"equals": true,
+											"description": "Allowed values: \"geojson.gz\", \"shp.zip\", \"geotiff\", and \"png\""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "History GeoJSON",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/history/{{datatype}}.geojson.gz?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"history",
+								"{{datatype}}.geojson.gz"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a Gzipped GeoJSON file of weather history for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-history-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([History Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-history/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "1606fbe4-3174-44d9-b5d1-ab9086d65fa3",
+							"name": "History GeoJSON",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{api_key}}/regions/{{region}}/history/{{datatype}}.geojson.gz?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{api_key}}",
+										"regions",
+										"{{region}}",
+										"history",
+										"{{datatype}}.geojson.gz"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						},
+						{
+							"id": "219b8cae-eb11-40c7-8bdb-a677d6f72ee6",
+							"name": "History GeoJSON",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/history/{{datatype}}.geojson.gz?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"history",
+										"{{datatype}}.geojson.gz"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "History SHP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/history/{{datatype}}.shp.zip?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"history",
+								"{{datatype}}.shp.zip"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a zipped shapefile of weather history for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-history-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([History Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-history/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "f9aeed18-4944-40f3-a8a5-4964cdffaf7f",
+							"name": "History SHP",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/history/{{datatype}}.shp.zip?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"history",
+										"{{datatype}}.shp.zip"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "History GeoTIFF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/history/{{datatype}}.geotiff?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"history",
+								"{{datatype}}.geotiff"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a GeoTIFF file of weather history for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-history-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([History Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-history/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "de56cc8d-c90a-4601-9ca9-cc1ee3280cd3",
+							"name": "History GeoTIFF",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/history/{{datatype}}.geotiff?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"history",
+										"{{datatype}}.geotiff"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "History PNG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/history/{{datatype}}.png?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"history",
+								"{{datatype}}.png"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a PNG format raster file of weather history for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-history-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([History Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-history/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "eb143b5e-a727-4cac-b665-ddb9a6126d4a",
+							"name": "History PNG",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/history/{{datatype}}.png?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"history",
+										"{{datatype}}.png"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Forecast",
+			"description": "",
+			"item": [
+				{
+					"name": "Forecast OnPoint ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}/forecast.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{onpoint_id}}",
+								"forecast.{{format}}"
+							],
+							"query": [
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of forecast weather data for an OnPoint™ ID. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-onpoint_id-forecast/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{onpoint_id}}` a valid OnPoint ID. (example: `10724391`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Forecast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-forecast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "3b826060-3c23-47b9-a3bf-c36c39d76de8",
+							"name": "Forecast OnPoint ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}/forecast.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{onpoint_id}}",
+										"forecast.{{format}}"
+									],
+									"query": [
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Forecast Lat/Lon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}/forecast.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{latitude}},{{longitude}}",
+								"forecast.{{format}}"
+							],
+							"query": [
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of forecast weather data for a latitude/longitude point. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-latitude_and_longitude-forecast/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{latitude}}` a valid latitude value between -90 and 90. (example: `38.8428`)\n\n`{{longitude}}` a valid longitude value between -180 and 180. (example: `-77.0381`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Forecast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-forecast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "cf950377-d087-4479-8c90-a38117ff1050",
+							"name": "Forecast Lat/Lon",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}/forecast.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{latitude}},{{longitude}}",
+										"forecast.{{format}}"
+									],
+									"query": [
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Forecast Postal Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}/forecast.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"postal_codes",
+								"{{postal_code}},{{country}}",
+								"forecast.{{format}}"
+							],
+							"query": [
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of forecast weather data for a postal code. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-forecast/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{postal_code}}` a valid postal code. Any spaces in the postal code must be URL encoded as `%20`. (example: `22222` or `X0A%200K0`)\n\n`{{country}}` a valid [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1) country code. (example: `us` or `ca`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource **is** available to free 30-day developer plans. For access to this resource for longer than 30 days, or for licensed use of the API in production environments, please email <sales@weathersource.com> or call (844) 813-2617."
+					},
+					"response": [
+						{
+							"id": "12573ab0-7571-4f3d-9300-9717f20e48e3",
+							"name": "Forecast Postal Code",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}/forecast.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"postal_codes",
+										"{{postal_code}},{{country}}",
+										"forecast.{{format}}"
+									],
+									"query": [
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Forecast Designated Marketing Area",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}/forecast.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"dmas",
+								"{{dma_id}}",
+								"forecast.{{format}}"
+							],
+							"query": [
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of forecast weather data for a Nielsen Designated Marketing Area (“DMA”). Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-dmas-dma_id-forecast/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{dma_id}}` any valid [Designated Marketing Area ID](https://developer.weathersource.com/documentation/designated-marketing-areas/). (example: `529`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Forecast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-forecast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "0b03c26c-cd2d-430e-8c72-a09e9fca3524",
+							"name": "Forecast Designated Marketing Area",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}/forecast.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"dmas",
+										"{{dma_id}}",
+										"forecast.{{format}}"
+									],
+									"query": [
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Forecast Spatial File Metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/forecast/{{datatype}}.json?timestamp_eq=2018-02-01T00:00:00+00:00&filetype=geojson.gz",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"forecast",
+								"{{datatype}}.json"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"equals": true,
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"disabled": true
+								},
+								{
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"equals": true,
+									"key": "period",
+									"value": "hour",
+									"disabled": true
+								},
+								{
+									"key": "filetype",
+									"value": "geojson.gz",
+									"equals": true,
+									"description": "Allowed values: \"geojson.gz\", \"shp.zip\", \"geotiff\", and \"png\""
+								}
+							]
+						},
+						"description": "Returns metadata for a regional spatial file of forecast weather for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-forecast-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([Forecast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-forecast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "656a54bf-590b-4d63-b815-4215f97e3c4f",
+							"name": "Forecast Spatial File Metadata",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/forecast/{{datatype}}.json?timestamp_eq=2018-02-01T00:00:00+00:00&filetype=geojson.gz",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"forecast",
+										"{{datatype}}.json"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"equals": true,
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"disabled": true
+										},
+										{
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"equals": true,
+											"key": "period",
+											"value": "hour",
+											"disabled": true
+										},
+										{
+											"key": "filetype",
+											"value": "geojson.gz",
+											"equals": true,
+											"description": "Allowed values: \"geojson.gz\", \"shp.zip\", \"geotiff\", and \"png\""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Forecast GeoJSON",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/forecast/{{datatype}}.geojson.gz?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"forecast",
+								"{{datatype}}.geojson.gz"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a Gzipped GeoJSON file of forecast weather for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-forecast-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([Forecast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-forecast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "8d996800-cbac-4e84-99ac-55c9a9f46bcd",
+							"name": "Forecast GeoJSON",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/forecast/{{datatype}}.geojson.gz?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"forecast",
+										"{{datatype}}.geojson.gz"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Forecast SHP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/forecast/{{datatype}}.shp.zip?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"forecast",
+								"{{datatype}}.shp.zip"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a zipped shapefile of forecast weather for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-forecast-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([Forecast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-forecast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "3541894d-dc5e-454c-b82b-2b239ed02e9e",
+							"name": "Forecast SHP",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/forecast/{{datatype}}.shp.zip?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"forecast",
+										"{{datatype}}.shp.zip"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Forecast GeoTIFF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/forecast/{{datatype}}.geotiff?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"forecast",
+								"{{datatype}}.geotiff"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a GeoTIFF file of forecast weather for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-forecast-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([Forecast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-forecast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "c0cbd00e-4a67-41e7-9b2d-8ad10dd20644",
+							"name": "Forecast GeoTIFF",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/forecast/{{datatype}}.geotiff?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"forecast",
+										"{{datatype}}.geotiff"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Forecast PNG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/forecast/{{datatype}}.png?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"forecast",
+								"{{datatype}}.png"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a PNG format raster file of forecast weather for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-forecast-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([Forecast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-forecast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "93338d6d-5a1e-40d3-a796-7378c29361b6",
+							"name": "Forecast PNG",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/forecast/{{datatype}}.png?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"forecast",
+										"{{datatype}}.png"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Nowcast",
+			"description": "",
+			"item": [
+				{
+					"name": "Nowcast OnPoint ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}/nowcast.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{onpoint_id}}",
+								"nowcast.{{format}}"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of nowcast weather data for an OnPoint™ ID. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-onpoint_id-nowcast/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{onpoint_id}}` a valid OnPoint ID. (example: `10724391`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Nowcast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-nowcast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "2fb613a1-1185-41e5-a3fc-f5660421d204",
+							"name": "Nowcast OnPoint ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}/nowcast.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{onpoint_id}}",
+										"nowcast.{{format}}"
+									],
+									"query": [
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Nowcast Lat/Lon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}/nowcast.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{latitude}},{{longitude}}",
+								"nowcast.{{format}}"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of nowcast weather data for a latitude/longitude point. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-latitude_and_longitude-nowcast/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{latitude}}` with any valid latitude value between -90 and 90. (example: `38.8428`)\n\n`{{longitude}}` with any valid longitude value between -180 and 180. (example: `-77.0381`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Nowcast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-nowcast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "3dad82fd-6f32-4d1e-8eda-bf8af93b0f5a",
+							"name": "Nowcast Lat/Lon",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}/nowcast.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{latitude}},{{longitude}}",
+										"nowcast.{{format}}"
+									],
+									"query": [
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Nowcast Postal Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.localhost/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}/nowcast.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"localhost"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"postal_codes",
+								"{{postal_code}},{{country}}",
+								"nowcast.{{format}}"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of nowcast weather data for a postal code. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-nowcast/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{postal_code}}` a valid postal code. Any spaces in the postal code must be URL encoded as `%20`. (example: `22222` or `X0A%200K0`)\n\n`{{country}}` a valid [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1) country code. (example: `us` or `ca`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource **is** available to free 30-day developer plans. For access to this resource for longer than 30 days, or for licensed use of the API in production environments, please email <sales@weathersource.com> or call (844) 813-2617."
+					},
+					"response": [
+						{
+							"id": "9b680026-32be-4738-be15-46ef72a2c728",
+							"name": "Nowcast Postal Code",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.localhost/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}/nowcast.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"localhost"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"postal_codes",
+										"{{postal_code}},{{country}}",
+										"nowcast.{{format}}"
+									],
+									"query": [
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Nowcast Designated Marketing Area",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}/nowcast.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"dmas",
+								"{{dma_id}}",
+								"nowcast.{{format}}"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of nowcast weather data for a Nielsen Designated Marketing Area (“DMA”). Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-dmas-dma_id-nowcast/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{dma_id}}` any valid [Designated Marketing Area ID](https://developer.weathersource.com/documentation/designated-marketing-areas/). (example: `529`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Nowcast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-nowcast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "3e69d797-3d26-4ce2-aabd-3b83fd175654",
+							"name": "Nowcast Designated Marketing Area",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}/nowcast.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"dmas",
+										"{{dma_id}}",
+										"nowcast.{{format}}"
+									],
+									"query": [
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Nowcast Spatial File Metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/nowcast/{{datatype}}.json?filetype=geojson.gz",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"nowcast",
+								"{{datatype}}.json"
+							],
+							"query": [
+								{
+									"key": "filetype",
+									"value": "geojson.gz",
+									"equals": true,
+									"description": "Allowed values: \"geojson.gz\", \"shp.zip\", \"geotiff\", and \"png\""
+								}
+							]
+						},
+						"description": "Returns metadata for a regional spatial file of nowcast weather for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-nowcast-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([Nowcast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-nowcast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "0511f073-47ea-40b4-9886-b48f95efc336",
+							"name": "Nowcast Spatial File Metadata",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/nowcast/{{datatype}}.json?filetype=geojson.gz",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"nowcast",
+										"{{datatype}}.json"
+									],
+									"query": [
+										{
+											"key": "filetype",
+											"value": "geojson.gz",
+											"equals": true,
+											"description": "Allowed values: \"geojson.gz\", \"shp.zip\", \"geotiff\", and \"png\""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Nowcast GeoJSON",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/nowcast/{{datatype}}.geojson.gz",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"nowcast",
+								"{{datatype}}.geojson.gz"
+							]
+						},
+						"description": "Returns a Gzipped GeoJSON file of nowcast weather for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-nowcast-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([Nowcast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-nowcast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "2e2e3d9d-d3ee-48d0-a53d-a39c84322142",
+							"name": "Nowcast GeoJSON",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/nowcast/{{datatype}}.geojson.gz",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"nowcast",
+										"{{datatype}}.geojson.gz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Nowcast SHP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/nowcast/{{datatype}}.shp.zip",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"nowcast",
+								"{{datatype}}.shp.zip"
+							]
+						},
+						"description": "Returns a zipped shapefile of nowcast weather for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-nowcast-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([Nowcast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-nowcast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "1f42dbb1-f678-4e69-8f86-69ba86ac3020",
+							"name": "Nowcast SHP",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/nowcast/{{datatype}}.shp.zip",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"nowcast",
+										"{{datatype}}.shp.zip"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Nowcast GeoTIFF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/nowcast/{{datatype}}.geojson.gz",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"nowcast",
+								"{{datatype}}.geojson.gz"
+							]
+						},
+						"description": "Returns a GeoTIFF file of nowcast weather for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-nowcast-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([Nowcast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-nowcast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "f3bdea1c-b12d-4bf6-8ac3-0f72d3945670",
+							"name": "Nowcast GeoTIFF",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/nowcast/{{datatype}}.geojson.gz",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"nowcast",
+										"{{datatype}}.geojson.gz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Nowcast PNG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/nowcast/{{datatype}}.png",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"nowcast",
+								"{{datatype}}.png"
+							]
+						},
+						"description": "Returns a PNG format raster file of nowcast weather for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-nowcast-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nThis resource is **not** available to free 30-day developer plans ([Nowcast Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-nowcast/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "89dbbd23-9830-4b4f-826d-d32e275e9fe8",
+							"name": "Nowcast PNG",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/nowcast/{{datatype}}.png",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"nowcast",
+										"{{datatype}}.png"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Climatology",
+			"description": "",
+			"item": [
+				{
+					"name": "Climatology OnPoint ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}/climatology.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{onpoint_id}}",
+								"climatology.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of climatology data (typical values and related statistical context) for an OnPoint™ ID. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-onpoint_id-climatology/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{onpoint_id}}` a valid OnPoint ID. (example: `10724391`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nClimatological data is **not** available to free 30-day developer plans. Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "ab3fb3bb-7d35-4e57-b313-057af79dbabf",
+							"name": "Climatology OnPoint ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}/climatology.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{onpoint_id}}",
+										"climatology.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Climatology Lat/Lon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}/climatology.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{latitude}},{{longitude}}",
+								"climatology.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of climatology data (typical values and related statistical context) for a latitude/longitude point. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-latitude_and_longitude-climatology/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{latitude}}` a valid latitude value between -90 and 90. (example: `38.8428`)\n\n`{{longitude}}` a valid longitude value between -180 and 180. (example: `-77.0381`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nClimatological data is **not** available to free 30-day developer plans. Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "a4104b77-e915-42a8-8a26-c93e960a3be9",
+							"name": "Climatology Lat/Lon",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}/climatology.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{latitude}},{{longitude}}",
+										"climatology.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Climatology Postal Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}/climatology.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"postal_codes",
+								"{{postal_code}},{{country}}",
+								"climatology.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of climatology data (typical values and related statistical context) for a postal code. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-climatology/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{postal_code}}` a valid postal code. Any spaces in the postal code must be URL encoded as `%20`. (example: `22222` or `X0A%200K0`)\n\n`{{country}}` a valid [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1) country code. (example: `us` or `ca`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nClimatological data is **not** available to free 30-day developer plans. Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "fce6930e-aa68-401f-93de-079cf3822d8c",
+							"name": "Climatology Postal Code",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}/climatology.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"postal_codes",
+										"{{postal_code}},{{country}}",
+										"climatology.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Climatology Designated Marketing Area",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}/climatology.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"dmas",
+								"{{dma_id}}",
+								"climatology.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of climatology data (typical values and related statistical context) for a Nielsen Designated Marketing Area (“DMA”). Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-dmas-dma_id-climatology/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{dma_id}}` any valid [Designated Marketing Area ID](https://developer.weathersource.com/documentation/designated-marketing-areas/). (example: `529`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nClimatological data is **not** available to free 30-day developer plans. Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "377587d6-ed62-49ba-9bb4-726efcb1882b",
+							"name": "Climatology Designated Marketing Area",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}/climatology.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"dmas",
+										"{{dma_id}}",
+										"climatology.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Climatology Spatial File Metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/climatology/{{datatype}}.json?timestamp_eq=2018-02-01T00:00:00+00:00&period=hour&filetype=geojson.gz",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"climatology",
+								"{{datatype}}.json"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"equals": true,
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")"
+								},
+								{
+									"key": "filetype",
+									"value": "geojson.gz",
+									"equals": true,
+									"description": "Allowed values: \"geojson.gz\", \"shp.zip\", \"geotiff\", and \"png\""
+								}
+							]
+						},
+						"description": "Returns metadata for a regional spatial file of climatology data (typical values and related statistical context) for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-climatology-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nClimatological data is **not** available to free 30-day developer plans. Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "3dd61d7a-2c88-4bc9-b7b0-23b81f6f06b2",
+							"name": "Climatology Spatial File Metadata",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/climatology/{{datatype}}.json?timestamp_eq=2018-02-01T00:00:00+00:00&period=hour&filetype=geojson.gz",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"climatology",
+										"{{datatype}}.json"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"equals": true,
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")"
+										},
+										{
+											"key": "filetype",
+											"value": "geojson.gz",
+											"equals": true,
+											"description": "Allowed values: \"geojson.gz\", \"shp.zip\", \"geotiff\", and \"png\""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Climatology GeoJSON",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/climatology/{{datatype}}.geojson.gz?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"climatology",
+								"{{datatype}}.geojson.gz"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a Gzipped GeoJSON file of climatology data (typical values and related statistical context) for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-climatology-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nClimatological data is **not** available to free 30-day developer plans. Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "7358e289-da3a-4bbf-8e43-29ac3a99d28d",
+							"name": "Climatology GeoJSON",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/climatology/{{datatype}}.geojson.gz?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"climatology",
+										"{{datatype}}.geojson.gz"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Climatology SHP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/climatology/{{datatype}}.shp.zip?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"climatology",
+								"{{datatype}}.shp.zip"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a zipped shapefile of climatology data (typical values and related statistical context) for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-climatology-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nClimatological data is **not** available to free 30-day developer plans. Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "9dfd2ecb-b521-4407-b36e-063721f805a1",
+							"name": "Climatology SHP",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/climatology/{{datatype}}.shp.zip?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"climatology",
+										"{{datatype}}.shp.zip"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Climatology GeoTIFF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/climatology/{{datatype}}.geotiff?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"climatology",
+								"{{datatype}}.geotiff"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a GeoTIFF file of climatology data (typical values and related statistical context) for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-climatology-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nClimatological data is **not** available to free 30-day developer plans. Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "d21d47c0-6a8a-4efc-ac98-c5a1dc022b10",
+							"name": "Climatology GeoTIFF",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/climatology/{{datatype}}.geotiff?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"climatology",
+										"{{datatype}}.geotiff"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Climatology PNG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/climatology/{{datatype}}.png?timestamp_eq=2018-02-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"regions",
+								"{{region}}",
+								"climatology",
+								"{{datatype}}.png"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2018-02-01T00:00:00+00:00",
+									"equals": true,
+									"description": "An ISO 8601 format timestamp."
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a PNG format raster file of climatology data (typical values and related statistical context) for the specified datatype. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-regions-region_id-climatology-datatype/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{region_id}}` Allowed: `global`\n\n`{{datatype}}` A supported weather field. (example: `precip`)\n\nClimatological data is **not** available to free 30-day developer plans. Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "d68332f8-38eb-4084-97c5-558b9df70ac9",
+							"name": "Climatology PNG",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/regions/{{region}}/climatology/{{datatype}}.png?timestamp_eq=2018-02-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"regions",
+										"{{region}}",
+										"climatology",
+										"{{datatype}}.png"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2018-02-01T00:00:00+00:00",
+											"equals": true,
+											"description": "An ISO 8601 format timestamp."
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Astronomy",
+			"description": "",
+			"item": [
+				{
+					"name": "Astronomy OnPoint ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}/astronomy.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{onpoint_id}}",
+								"astronomy.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of astronomical data for an OnPoint™ ID. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-onpoint_id-astronomy/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{onpoint_id}}` a valid OnPoint ID. (example: `10724391`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Astronomy Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-astronomy/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "eb6d13d5-c5bf-4f88-9db0-c5d0798d4bf5",
+							"name": "Astronomy OnPoint ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}/astronomy.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{onpoint_id}}",
+										"astronomy.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Astronomy Lat/Lon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}/astronomy.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{latitude}},{{longitude}}",
+								"astronomy.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of astronomical data for a latitude/longitude point. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-latitude_and_longitude-astronomy/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{latitude}}` a valid latitude value between -90 and 90. (example: `38.8428`)\n\n`{{longitude}}` a valid longitude value between -180 and 180. (example: `-77.0381`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Astronomy Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-astronomy/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "4da31759-dd4c-4841-9d2b-482d6974f8c3",
+							"name": "Astronomy Lat/Lon",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}/astronomy.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{latitude}},{{longitude}}",
+										"astronomy.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Astronomy Postal Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}/astronomy.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"postal_codes",
+								"{{postal_code}},{{country}}",
+								"astronomy.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of astronomical data for a postal code. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-astronomy/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{postal_code}}` a valid postal code. Any spaces in the postal code must be URL encoded as `%20`. (example: `22222` or `X0A%200K0`)\n\n`{{country}}` a valid [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1) country code. (example: `us` or `ca`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource **is** available to free 30-day developer plans. For access to this resource for longer than 30 days, or for licensed use of the API in production environments, please email <sales@weathersource.com> or call (844) 813-2617."
+					},
+					"response": [
+						{
+							"id": "6d2427e0-7a58-41a8-8c6f-7865be04625e",
+							"name": "Astronomy Postal Code",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}/astronomy.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"postal_codes",
+										"{{postal_code}},{{country}}",
+										"astronomy.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Astronomy Designated Marketing Area",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}/astronomy.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"dmas",
+								"{{dma_id}}",
+								"astronomy.{{format}}"
+							],
+							"query": [
+								{
+									"key": "timestamp_eq",
+									"value": "2016-01-01T00:00:00+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+								},
+								{
+									"key": "timestamp_between",
+									"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+									"equals": true,
+									"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+									"disabled": true
+								},
+								{
+									"key": "period",
+									"value": "hour",
+									"equals": true,
+									"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a collection of astronomical data for a Nielsen Designated Marketing Area (“DMA”). Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-dmas-dma_id-astronomy/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{dma_id}}` any valid [Designated Marketing Area ID](https://developer.weathersource.com/documentation/designated-marketing-areas/). (example: `529`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Astronomy Postal Code](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country-astronomy/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "c1bcaf5c-2428-43e1-8991-3954b75b8636",
+							"name": "Astronomy Designated Marketing Area",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}/astronomy.{{format}}?timestamp_eq=2016-01-01T00:00:00+00:00",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"dmas",
+										"{{dma_id}}",
+										"astronomy.{{format}}"
+									],
+									"query": [
+										{
+											"key": "timestamp_eq",
+											"value": "2016-01-01T00:00:00+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". ISO 8601 format"
+										},
+										{
+											"key": "timestamp_between",
+											"value": "2016-01-01T00:00:00+00:00,2016-01-31T23:59:59+00:00",
+											"equals": true,
+											"description": "Use either \"timestamp_eq\" or \"timestamp_between\". Comma separated ISO 8601 format",
+											"disabled": true
+										},
+										{
+											"key": "period",
+											"value": "hour",
+											"equals": true,
+											"description": "Allowed values: \"day\" or \"hour\" (default is \"day\")",
+											"disabled": true
+										},
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Location Metadata",
+			"description": "",
+			"item": [
+				{
+					"name": "OnPoint ID Metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{onpoint_id}}.{{format}}"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns metadata for an OnPoint™ ID. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-onpoint_id/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{onpoint_id}}` a valid OnPoint ID. (example: `10724391`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Postal Code Metadata](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "b35004cb-29b1-4696-98fa-16510b196ae2",
+							"name": "OnPoint ID Metadata",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{onpoint_id}}.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{onpoint_id}}.{{format}}"
+									],
+									"query": [
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Lat/Lon Metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"points",
+								"{{latitude}},{{longitude}}.{{format}}"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns metadata for an OnPoint™ ID. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-points-latitude_and_longitude/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{latitude}}` a valid latitude value between -90 and 90. (example: `38.8428`)\n\n`{{longitude}}` a valid longitude value between -180 and 180. (example: `-77.0381`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Postal Code Metadata](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "9c9ed65a-f7a5-4cdb-b068-b4f3fe822a12",
+							"name": "Lat/Lon Metadata",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/points/{{latitude}},{{longitude}}.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"points",
+										"{{latitude}},{{longitude}}.{{format}}"
+									],
+									"query": [
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Postal Code Metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"postal_codes",
+								"{{postal_code}},{{country}}.{{format}}"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns metadata for a postal code. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{postal_code}}` a valid postal code. Any spaces in the postal code must be URL encoded as `%20`. (example: `22222` or `X0A%200K0`)\n\n`{{country}}` a valid [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1) country code. (example: `us` or `ca`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource **is** available to free 30-day developer plans. For access to this resource for longer than 30 days, or for licensed use of the API in production environments, please email <sales@weathersource.com> or call (844) 813-2617."
+					},
+					"response": [
+						{
+							"id": "96f386c4-9afe-44ea-a312-41628c715d40",
+							"name": "Postal Code Metadata",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/postal_codes/{{postal_code}},{{country}}.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"postal_codes",
+										"{{postal_code}},{{country}}.{{format}}"
+									],
+									"query": [
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Designated Marketing Area Metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}.{{format}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weathersource",
+								"com"
+							],
+							"path": [
+								"v1",
+								"{{onpoint_key}}",
+								"dmas",
+								"{{dma_id}}.{{format}}"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "all",
+									"equals": true,
+									"description": "Comma separated list of field names (default is \"all\")",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns metadata for a postal code. Full documentation for this resource is found at the [Developer Portal](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country/)\n\n`{{onpoint_key}}` set as a environment variable in Postman. Get a free 30-day [developer key](https://developer.weathersource.com/#developer-account-sign-up).\n\n`{{postal_code}}` a valid postal code. Any spaces in the postal code must be URL encoded as `%20`. (example: `22222` or `X0A%200K0`)\n\n`{{country}}` a valid [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1) country code. (example: `us` or `ca`)\n\n`{{format}}` the response. Allowed values: `json` and `csv`\n\nThis resource is **not** available to free 30-day developer plans ([Postal Code Metadata](https://developer.weathersource.com/documentation/resources/get-postal_codes-postal_code_and_country/) is available). Please email <sales@weathersource.com> or call (844) 813-2617 if you need access to this resource."
+					},
+					"response": [
+						{
+							"id": "5fcaf3e7-5cde-468b-94fa-16a0fbfa3f04",
+							"name": "Designated Marketing Area Metadata",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "https://api.weathersource.com/v1/{{onpoint_key}}/dmas/{{dma_id}}.{{format}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"weathersource",
+										"com"
+									],
+									"path": [
+										"v1",
+										"{{onpoint_key}}",
+										"dmas",
+										"{{dma_id}}.{{format}}"
+									],
+									"query": [
+										{
+											"key": "fields",
+											"value": "all",
+											"equals": true,
+											"description": "Comma separated list of field names (default is \"all\")",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d23c3368-7d75-4110-9026-3a4f094c0cd9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0b105189-e4ce-470c-992b-5edf1dd8a9a5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "924f8cd0-e90d-4980-b2e2-2d52cec3a4fb",
+			"key": "onpoint_key",
+			"value": "ENTER API KEY HERE",
+			"type": "text"
+		},
+		{
+			"id": "30703bec-ab37-4b3a-8566-241b2492d9f1",
+			"key": "onpoint_id",
+			"value": "10724391",
+			"type": "text"
+		},
+		{
+			"id": "32c98b5c-630d-4a07-a6b0-808cd9f9657f",
+			"key": "latitude",
+			"value": "38.8428",
+			"type": "text"
+		},
+		{
+			"id": "2d22df12-a428-46e2-b6a5-d9b0e49f24ce",
+			"key": "longitude",
+			"value": "-77.0381",
+			"type": "text"
+		},
+		{
+			"id": "b4b5cc39-3ef5-4783-b5ae-03a0f2340976",
+			"key": "postal_code",
+			"value": "22222",
+			"type": "text"
+		},
+		{
+			"id": "109277ec-6e3e-41ec-8318-c0fb6ec32ac4",
+			"key": "country",
+			"value": "us",
+			"type": "text"
+		},
+		{
+			"id": "14097e19-59e0-4260-a8fd-23ec888173d7",
+			"key": "dma_id",
+			"value": "529",
+			"type": "text"
+		},
+		{
+			"id": "fded7b6b-9175-4961-9842-9c0b5a35660b",
+			"key": "region",
+			"value": "global",
+			"type": "text"
+		},
+		{
+			"id": "cb8c265c-a090-4160-a4d0-5f7b22a7a6b9",
+			"key": "format",
+			"value": "json",
+			"type": "text"
+		},
+		{
+			"id": "82707c3a-589d-4b75-b1c3-a24991e0e47e",
+			"key": "datatype",
+			"value": "precip",
+			"type": "text"
+		}
+	]
+}
