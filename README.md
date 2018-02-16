@@ -1,6 +1,6 @@
-# Using the OnPoint® API with Postman
+# Using the OnPoint API with Postman
 
-The [OnPoint API](https://developer.weathersource.com/) by [Weather Source](https://weathersource.com/) provides hyper-local past, present & forecast weather data for business intelligence at a global scale.
+The [OnPoint® API](https://developer.weathersource.com/) by [Weather Source](https://weathersource.com/) provides hyper-local past, present & forecast weather data for business intelligence at a global scale.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/ce7a3abf5ca6e28ff776)
 
